@@ -7,8 +7,10 @@
 html,
 body {
   height: 100%;
-  background-color: black;
-  width: 650px;
+  //background-color: white;
+  background: linear-gradient(rgb(5, 5, 5), rgba(48, 2, 253, 0.993)); // Gradiente lineal transparente
+  backdrop-filter: blur(10px); // Aplicación del efecto de desenfoque
+  width: auto;
   margin: auto;
 }
 body {
@@ -73,4 +75,57 @@ div.center {
   align-items: center;
   display: inline-block;
   text-underline-position: auto;
+}
+
+.example-container {
+  width: 1515px;
+  height: 700px;
+  
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  
+  height: 100%;
+  width: 500px;
+  
+  
+}
+
+.example-sidenav {
+  padding: 40px;
+}
+
+.example-menu {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 180px;
+  max-width: 280px;
+  background-color: rgb(255, 254, 254);
+  padding: 6px 0;
+  
+}
+
+.example-menu-item {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  user-select: none;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+}
+
+.example-menu-item:hover {
+  background-color: rgb(208, 208, 208);
+}
+
+.example-menu-item:active {
+  background-color: rgb(170, 170, 170);
 }

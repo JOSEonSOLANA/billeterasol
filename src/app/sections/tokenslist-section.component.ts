@@ -21,32 +21,32 @@ import { CommonModule } from '@angular/common';
     standalone: true,
     styleUrls: ['../../styles.scss'],
     template: `
-    <mat-card class="px-4 py-8 blur-background">
+    <mat-card class="px-4 py-8 bg-transparent">
       @if (!allTokens()) {
           <p class="text-center text-white">Connect your wallet.</p>
       } @else if (allTokens()?.length === 0) {
           <p class="text-center text-white">No activity.</p>
       } @else  {
-          <div class="my-button-row center">
-              <button mat-raised-button color="primary" (click)="onTransfer()">SEND</button>
+          <!-- <div class="my-button-row center"> -->
+              <!-- <button mat-raised-button color="primary" (click)="onTransfer()">SEND</button>
               <button mat-raised-button color="primary" (click)="onBuy()">BUY</button>
               <button mat-raised-button color="primary" (click)="onReceive()">RECEIVE</button>
-          </div>
+          </div> -->
           <div style="border-top: 20px solid transparent;"></div> 
           <div *ngFor="let token of allTokens()">
               
               <div class="token-info">
-                        <img class="circular-image" [src]="token.info.image" [width]="50"/>
-                        <div class="token-name-balance">
-                        <span class="text-white text-2xl">&nbsp;{{ token.info.name }}</span>
-                        <span class="token-info-debajo text-1xl align-text-bottom">&nbsp;{{ token.balance | number }}&nbsp;<span class="token-info-debajo text-1xl">{{ token.info.symbol }}</span></span>
-                        
+                  <img class="circular-image" [src]="token.info.image" [width]="50"/>
+                    <div class="token-name-balance">
+                      <span class="text-white text-2xl">&nbsp;{{  token.balance | number  }}<span class="text-4px">&nbsp;{{ token.info.symbol }}</span></span>
+                        <span class="token-info-debajo text-1xl align-text-bottom text-lime-500">&nbsp;
+                          {{ (token.balance) | number }}&nbsp;
+                        <span class="token-info-debajo text-1xl">&nbsp;$&nbsp;
+                      </span>
+                      </span>  
                     </div>
-                    <div>
-                    <p class="text-right items-right text-2xl mb-6 text-white" style="padding-right: 100px;">&nbsp;&nbsp;$ {{ tokenValueInUSD() | number }}</p>
-                    </div>
-                </div>
-                </div>
+              </div>
+          </div>
             
       }  
     </mat-card>

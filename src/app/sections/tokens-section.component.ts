@@ -12,15 +12,23 @@ import { DecimalPipe } from '@angular/common';
     selector: 'billeterasol-tokens-section',
     imports: [MatButton, DecimalPipe ],
     template: `
-      <section class="px-4 py-8">
+      <section class="px-4 py-8 mat-app-background">
         @if (account1()) {
-      <p class="text-center text-3xl mb-6 text-white">$ {{ SolBalanceInUSD() | number }}</p>
-        <div 
-          class=" flex justify-center items-center gap-2 mb-4">
-          <img src="https://i.ibb.co/Wtb15V7/solana-sol-seeklogo.png" class="w-12 h-12"/>
-          <p class="text-3xl text-white">SOLANA</p>
-          <p class="text-2xl text-white">{{ account1()?.balance | number }} SOL</p>
+          <p class=" text-white text-3xl flex justify-center">BALANCE&nbsp;&nbsp;</p>
+          <br>
+        <div class="token-info flex justify-center items-center gap-2 mb-4">
+        <img src="https://i.ibb.co/Wtb15V7/solana-sol-seeklogo.png" class="w-14 h-14"/>
+        <div class="token-name-balance text-center text-2xl ">
+        <span class="text-white">&nbsp;{{  account1()?.balance | number  }} SOL</span>
+        <div>
+        <span class="token-info-debajo align-text-bottom text-lime-500 text-lg">&nbsp;{{ SolBalanceInUSD() | number }}&nbsp;
+        <span class="token-info-debajo">&nbsp;$</span>
+        </span>  
         </div>
+        </div>
+        </div>
+        
+        
         }  
       <section>
     `,

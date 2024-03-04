@@ -21,25 +21,25 @@ import { DatePipe } from '@angular/common';
       } @else if (transactions()?.length === 0) {
         <p class="text-center text-white">no Activity.</p>
       } @else {
-        <table mat-table [dataSource]="transactions() ?? []" class=" bg-blue-800">
+        <table mat-table [dataSource]="transactions() ?? []" class=" bg-blue-800 text-white">
           <ng-container matColumnDef="type">
-            <th mat-header-cell *matHeaderCellDef>Type</th>
-            <td mat-cell *matCellDef="let element">{{ element.type }}</td>
+            <th mat-header-cell *matHeaderCellDef class="text-white">Type</th>
+            <td mat-cell *matCellDef="let element" class="text-white">{{ element.type }}</td>
           </ng-container>
 
           <ng-container matColumnDef="fee">
-            <th mat-header-cell *matHeaderCellDef>Fee</th>
-            <td mat-cell *matCellDef="let element">{{ element.fee }}</td>
+            <th mat-header-cell *matHeaderCellDef class="text-white">Fee</th>
+            <td mat-cell *matCellDef="let element" class="text-white">{{ element.fee }}</td>
           </ng-container>
 
           <ng-container matColumnDef="timestamp">
-            <th mat-header-cell *matHeaderCellDef>Time</th>
-            <td mat-cell *matCellDef="let element">{{ element.timestamp | date: 'medium'}}</td>
+            <th mat-header-cell *matHeaderCellDef class="text-white">Time</th>
+            <td mat-cell *matCellDef="let element" class="text-white">{{ element.timestamp | date: 'medium'}}</td>
           </ng-container>
 
           <ng-container matColumnDef="status">
-            <th mat-header-cell *matHeaderCellDef>Status</th>
-            <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+            <th mat-header-cell *matHeaderCellDef class="text-white">Status</th>
+            <td mat-cell *matCellDef="let element" class="text-white">{{ element.status }}</td>
           </ng-container>
 
 

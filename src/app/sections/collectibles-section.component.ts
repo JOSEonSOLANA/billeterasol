@@ -31,7 +31,7 @@ import { MatButton } from '@angular/material/button';
 
           <ng-container matColumnDef="symbol">
             <th mat-header-cell *matHeaderCellDef></th>
-            <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+            <td mat-cell *matCellDef="let element" class="text-white">{{ element.symbol }}</td>
           </ng-container>
 
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

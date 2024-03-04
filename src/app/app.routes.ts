@@ -17,6 +17,11 @@ export const appRoutes: Route[] = [
             import('./pages/activity-page.component').then((m) => m.ActivityPageComponent),
     },
     {
+        path: 'defi',
+        loadComponent: () => 
+            import('./pages/defi-page.component').then((m) => m.DefiPageComponent),
+    },
+    {
         path: '**',
         redirectTo: '',
     },
