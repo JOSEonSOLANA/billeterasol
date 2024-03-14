@@ -26,6 +26,7 @@
     "@heavy-duty/wallet-adapter-cdk": "^0.8.3",
     "@heavy-duty/wallet-adapter-material": "^0.8.3",
     "@nx/angular": "18.0.4",
+    "@shyft-to/js": "^0.2.35",
     "@solana/spl-token": "^0.4.0",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",

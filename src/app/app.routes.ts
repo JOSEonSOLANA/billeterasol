@@ -17,9 +17,9 @@ export const appRoutes: Route[] = [
             import('./pages/activity-page.component').then((m) => m.ActivityPageComponent),
     },
     {
-        path: 'defi',
+        path: 'snipper',
         loadComponent: () => 
-            import('./pages/defi-page.component').then((m) => m.DefiPageComponent),
+            import('./pages/orca-page.component').then((m) => m.OrcaPageComponent),
     },
     {
         path: '**',

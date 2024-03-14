@@ -198,8 +198,7 @@ export class PriceToken {
           return this._httpClient.get<{
             data: { SOL: { mintSymbol: string, vsToken: string, vsTokenSymbol: string, price: number , timeTaken: number }  };
           }>(url.toString()).pipe(
-            map(response => response.data)
-          );
+            map(response => response.data)          );
         });
 
         return forkJoin(requests); 
@@ -207,3 +206,53 @@ export class PriceToken {
     );
   }
 }
+
+// peticion para buscar los tokens de Orca
+// @Injectable({ providedIn: 'root' })
+//   export class OrcaList {
+//     private readonly _httpClient= inject(HttpClient);
+//     private readonly _key = config.shyftApiKey
+//     private readonly _header= { 'x-api-key': this._key };
+    
+    
+//     getAllTokens(publicKey: string | undefined ) {
+
+//     if (!publicKey) {
+//       return of(null);
+//     }
+    
+    
+//     const url = new URL('https://api.shyft.to/sol/v1/wallet/all_tokens');
+    
+//     url.searchParams.set('network', 'mainnet-beta');
+//     url.searchParams.set('wallet', publicKey);
+
+//     return this._httpClient.get<{
+//       result: { address: string ; balance: number; info: { name: string, symbol: string, image: string }; }[];
+//     }>(url.toString(), { headers: this._header }).pipe(
+//       tap(response => {
+        
+//         if(token.address.update_authority === "3axbTs2z5GBy6usVbNVoqEgZMng3vZvMnAoX29BFfwhr" && token.name.includes("Orca Whirlpool Position")){
+//           return {
+//               success: true,
+//               address: token.mint
+//         }
+//       }),
+//     }}
+//     map((response) => response.result); 
+
+//     for (let i = 0; i < this.getAllTokens.length; i++){
+//       const token = getAllTokens[i];
+
+//       if(token.update_authority === "3axbTs2z5GBy6usVbNVoqEgZMng3vZvMnAoX29BFfwhr" && token.name.includes("Orca Whirlpool Position")){
+//           return {
+//               success: true,
+//               address: token.mint
+//           }
+//       }
+//   }
+//   return {
+//       success: false,
+//       address: ""
+//   };
+    

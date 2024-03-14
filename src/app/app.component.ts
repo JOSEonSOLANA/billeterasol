@@ -26,7 +26,7 @@ import {CdkMenu, CdkMenuItem} from '@angular/cdk/menu';
     <a [routerLink]="['']" button class="example-menu-item" cdkMenuItem>Tokens</a>
     <a [routerLink]="['collectibles']" button class="example-menu-item" cdkMenuItem>NFTs</a>
     <a [routerLink]="['activity']" button class="example-menu-item" cdkMenuItem>Activity</a>
-    <a [routerLink]="['defi']" button class="example-menu-item" cdkMenuItem>Defi</a>
+    <a [routerLink]="['snipper']" button class="example-menu-item" cdkMenuItem>Snipper</a>
     <button class="example-menu-item" cdkMenuItem>Airdrops</button>
     </div>
     <div class="flex justify-center mb-4">
