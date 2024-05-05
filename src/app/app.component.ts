@@ -22,8 +22,9 @@ import {CdkMenu, CdkMenuItem} from '@angular/cdk/menu';
     <mat-drawer mode="side" opened>
     <p>SOLEFI</p>
     <div class="example-menu" cdkMenu>
-    <button class="example-menu-item" cdkMenuItem>Dashboard</button>
-    <a [routerLink]="['']" button class="example-menu-item" cdkMenuItem>Tokens</a>
+     <!-- <button class="example-menu-item" cdkMenuItem>Dashboard</button> -->
+    <a [routerLink]="['dashboard']" button class="example-menu-item" cdkMenuItem>Dashboard</a>
+    <a [routerLink]="['tokens']" button class="example-menu-item" cdkMenuItem>Tokens</a>
     <a [routerLink]="['collectibles']" button class="example-menu-item" cdkMenuItem>NFTs</a>
     <a [routerLink]="['activity']" button class="example-menu-item" cdkMenuItem>Activity</a>
     <a [routerLink]="['snipper']" button class="example-menu-item" cdkMenuItem>Snipper</a>

@@ -28,6 +28,7 @@
     "@nx/angular": "18.0.4",
     "@shyft-to/js": "^0.2.35",
     "@solana/spl-token": "^0.4.0",
+    "chart.js": "^4.4.2",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "ngxtension": "^2.0.0",

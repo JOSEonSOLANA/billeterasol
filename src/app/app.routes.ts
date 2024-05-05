@@ -7,6 +7,11 @@ export const appRoutes: Route[] = [
             import('./pages/balance-page.component').then((m) => m.BalancePageComponent),
     },
     {
+        path: 'dashboard',
+        loadComponent: () => 
+            import('./pages/dashboard-page.component').then((m) => m.DashboardPageComponent),
+    },
+    {
         path: 'collectibles',
         loadComponent: () => 
             import('./pages/collectibles-page.component').then((m) => m.CollectiblesPageComponent),

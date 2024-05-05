@@ -27,11 +27,11 @@ import { CommonModule } from '@angular/common';
       } @else if (allTokens()?.length === 0) {
           <p class="text-center text-white">No activity.</p>
       } @else  {
-          <!-- <div class="my-button-row center"> -->
-              <!-- <button mat-raised-button color="primary" (click)="onTransfer()">SEND</button>
+           <div class="my-button-row center">
+              <button mat-raised-button color="primary" (click)="onTransfer()">SEND</button>
               <button mat-raised-button color="primary" (click)="onBuy()">BUY</button>
               <button mat-raised-button color="primary" (click)="onReceive()">RECEIVE</button>
-          </div> -->
+          </div> 
           <div style="border-top: 20px solid transparent;"></div> 
           <div *ngFor="let token of allTokens()">
               
